@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Great Scott!</title>
+
+    <!--CSS FILES-->
+    <!-- Latest Bootstrap compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Styles/Home.css" />
+
+    <!-- JAVASCRIPT FILES-->
+    <!-- Firebase Stuff-->
+     <!--  Maybe don't need this??? 
+        <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCdD4Isc3AmF6CopS5gjYAW6ObV6oeuhQA",
+                authDomain: "stepahnies-present.firebaseapp.com",
+                databaseURL: "https://stepahnies-present.firebaseio.com",
+                storageBucket: "stepahnies-present.appspot.com",
+                messagingSenderId: "123421287321"
+            };
+            firebase.initializeApp(config);
+        </script>
+    -->
+    <!-- Latest Bootstrap compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+    <script src="../Scripts/GreatScott.js"></script>
+    <script src="../Scripts/Home.js"></script>
+
+    <script>
+        $(function () {
+            var pageObj = new GreatScott.Home.Index();
+        });
+    </script>
+
+
+
+
+
+
+
+</head>
+    <body>
+        <div class="jumbotron">
+            <h1>Hello, world!</h1>
+            <p>...</p>
+            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        </div>
+
+        <div class="row" id="gs-top-three">
+            
+        </div>
+    </body>
+</html>
+
+<script id="gs-highlight" type="text/x-jquery-tmpl">
+    {{each Highlight}}
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <img src="${image}" alt="...">
+                <div class="caption">
+                    <h3>${title}</h3>
+                    <p>${intro}</p>
+                    <p><a href="#" class="btn btn-primary" role="button">Read More!</a></p>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</script>
